@@ -86,6 +86,7 @@ deleteNumber.onclick = function () {
         answer.innerHTML = '0'
         one = null
         two = null
+        operation = null
     } else if(!operation) {
         answer.innerHTML = answer.innerHTML.slice(0,-1)
     } else if(operation) {
@@ -96,6 +97,7 @@ deleteNumber.onclick = function () {
 
 reload.onclick = function () {
     answer.innerHTML = '0'
+    operation = null
     one = null
     two = null
 }

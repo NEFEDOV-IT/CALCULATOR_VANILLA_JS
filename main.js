@@ -54,7 +54,7 @@ function operationCalc(operation) {
         answer.innerHTML = calc(operation, one, two)
     }
     if (!one) {
-        one = answer.innerHTML;
+        one = answer.innerHTML
     }
 }
 
@@ -80,16 +80,18 @@ result.onclick = function () {
         answer.innerHTML = calc(operation, one, two);
         one = answer.innerHTML;
         if (answer.innerHTML.length > 7) {
-            answer.innerHTML = (+answer.innerHTML).toExponential(1);
+            answer.innerHTML = (+answer.innerHTML).toExponential(2);
         }
     }
 }
 
 deleteNumber.onclick = function () {
-    if (answer.innerHTML.length > 1) {
-        answer.innerHTML = answer.innerHTML.slice(0, answer.innerHTML.length - 1)
-    } else if (answer.innerHTML.length === 1) {
+    if (answer.innerHTML.length === 1) {
         answer.innerHTML = '0'
+        one = null
+        two = null
+    } else {
+        answer.innerHTML = answer.innerHTML.slice(0,-1)
     }
 }
 
@@ -98,5 +100,4 @@ reload.onclick = function () {
     one = null
     two = null
 }
-
 

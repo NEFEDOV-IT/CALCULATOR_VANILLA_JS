@@ -14,13 +14,13 @@ let two
 for (let button of buttons) {
     button.onclick = function () {
         if (!one) {
-            answer.innerHTML === '0' ? answer.innerHTML = button.innerHTML : answer.innerHTML += button.innerHTML;
+            answer.innerHTML === '0' ? answer.innerHTML = button.innerHTML : answer.innerHTML += button.innerHTML
         }
         if (one) {
             if (!two) {
-                two = answer.innerHTML = button.innerHTML;
+                two = answer.innerHTML = button.innerHTML
             } else {
-                two = answer.innerHTML += button.innerHTML;
+                two = answer.innerHTML += button.innerHTML
             }
         }
         if (answer.innerHTML.length > 7) {
@@ -58,29 +58,25 @@ function operationCalc(operation) {
     }
 }
 
-function getResult(result) {
-    return `${result}`
-}
-
 function calc(operation, one, two) {
 
     const operators = {
-        'sum': getResult(+one + +two),
-        'multi': getResult(one * two),
-        'sub': getResult(one - two),
-        'div': getResult(one / two),
+        'sum': +one + +two,
+        'multi': one * two,
+        'sub': one - two,
+        'div': one / two,
     }
 
     const result = operators[operation]
-    return isFinite(result) ? result : 'Ошибка';
+    return isFinite(result) ? result : 'Ошибка'
 }
 
 result.onclick = function () {
     if (one && two && operation) {
-        answer.innerHTML = calc(operation, one, two);
-        one = answer.innerHTML;
+        answer.innerHTML = calc(operation, one, two)
+        one = answer.innerHTML
         if (answer.innerHTML.length > 7) {
-            answer.innerHTML = (+answer.innerHTML).toExponential(2);
+            answer.innerHTML = (+answer.innerHTML).toExponential(1)
         }
     }
 }
@@ -90,8 +86,11 @@ deleteNumber.onclick = function () {
         answer.innerHTML = '0'
         one = null
         two = null
-    } else {
+    } else if(!operation) {
         answer.innerHTML = answer.innerHTML.slice(0,-1)
+    } else if(operation) {
+        two = two.slice(0, -1)
+        answer.innerHTML = two
     }
 }
 

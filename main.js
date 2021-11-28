@@ -77,9 +77,9 @@ function resultCalc() {
         operandOne = null
         operandTwo = null
         operation = undefined
-        if (answer.textContent.length > 7) {
-            answer.style.fontSize = '28px'
-        }
+    }
+    if (answer.textContent.length > 7) {
+        answer.style.fontSize = '28px'
     }
 }
 
@@ -110,4 +110,3 @@ function resetCalc() {
     operandTwo = null
     answer.style.fontSize = '80px'
 }
-

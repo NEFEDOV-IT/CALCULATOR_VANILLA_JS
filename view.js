@@ -1,0 +1,5 @@
+export const buttons = document.querySelectorAll('.num_btn')
+export const div = document.getElementById('div')
+export const multi = document.getElementById('multi')
+export const sub = document.getElementById('sub')
+export const sum = document.getElementById('sum')

@@ -1,5 +1,5 @@
 import {buttons} from '/view.js'
-import {div} from './view.js'
+import {div} from '/view.js'
 import {multi} from '/view.js'
 import {sum} from '/view.js'
 import {sub} from '/view.js'

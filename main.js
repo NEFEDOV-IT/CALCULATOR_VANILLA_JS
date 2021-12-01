@@ -1,4 +1,4 @@
-import {buttons} from './view.js'
+import {buttons} from '/view.js'
 const div = document.getElementById('div')
 const multi = document.getElementById('multi')
 const sub = document.getElementById('sub')

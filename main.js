@@ -3,10 +3,10 @@ import {div} from '/view.js'
 import {multi} from '/view.js'
 import {sum} from '/view.js'
 import {sub} from '/view.js'
-const answer = document.getElementById('answer')
-const deleteNumber = document.getElementById('delete')
-const reload = document.getElementById('reload')
-const result = document.getElementById('result')
+import {answer} from '/view.js'
+import {deleteNumber} from '/view.js'
+import {reload} from '/view.js'
+import {result} from '/view.js'
 let operation = undefined
 let operandOne = null
 let operandTwo = null
